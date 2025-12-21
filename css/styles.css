@@ -82,7 +82,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 400;
-    line-height: normal;
+    line-height: 1.16;
     margin: 0;
 }
 
@@ -179,6 +179,17 @@ a {
     text-align: left;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
 .about-section-text {
     font-size: 22px;
     line-height: 1.73;
@@ -199,7 +210,7 @@ a {
 .procedures-article-title {
     color: var(--color-background-light);
     font-size: 24px;
-    line-height: 1.2;
+    line-height: 1.18;
     text-align: center;
 }
 
@@ -208,6 +219,7 @@ a {
     color: var(--color-background-light);
     font-size: 22px;
     font-weight: 600;
+    line-height: 1.18;
     text-align: center;
 }
 
@@ -222,9 +234,11 @@ a {
 .address-link {
     color: var(--color-background-light);
     font-size: 16px;
+    line-height: 1.2;
 }
 
 .text-privacy-policy {
     color: var(--color-privacy-policy);
     font-size: 13px;
+    line-height: 1.53;
 }
