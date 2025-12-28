@@ -69,7 +69,7 @@
     --color-primery-light: #4a4a4a;
     --color-primery-dark: #011c44;
     --color-background-light: #fff;
-    --color-privacy-policy: #747272;
+    --color-grey: #747272;
 }
 
 /* Base styles */
@@ -115,6 +115,46 @@ a {
     text-decoration: none;
 }
 
+.container {
+    width: 100%;
+    max-width: 1288px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Buttons */
+.button {
+    width: 281px;
+    height: 53px;
+    padding: 16px 32px;
+    margin-bottom: 8px;
+    border: 2px solid var(--color-brand-light);
+    border-radius: 32px;
+    color: var(--color-background-light);
+    background-color: var(--color-brand-light);
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.button:hover {
+    color: var(--color-primery-dark);
+    background-color: transparent;
+    border: 2px solid var(--color-brand-light);
+}
+
+input, textarea {
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: inherit;
+    color: var(--color-background-light);
+    border: 2px solid var(--color-grey);
+    border-radius: 32px;
+    width: 310px;
+    height: 52px;
+    padding: 18px 32.85px;
+}
+
 .text-brand {
     color: var(--color-brand-light);
 }
@@ -124,7 +164,10 @@ a {
 }
 
 /* Header */
-/* Links */
+.header {
+    padding-bottom: 8.26px;
+}
+
 .header-link {
     color: var(--color-primery-light);
 }
@@ -134,29 +177,32 @@ a {
     font-weight: 700;
 }
 
-/* Buttons */
-.button {
-    color: var(--color-background-light);
-    background-color: var(--color-brand-light);
-    border: 2px solid var(--color-brand-light);
-    border-radius: 32px;
-    font-weight: 600;
-}
-
-.button:hover {
-    color: var(--color-primery-dark);
-    background-color: transparent;
-    border: 2px solid var(--color-brand-light);
-    cursor: pointer;
+/* Section title */
+.section-title {
+    font-family: 'Play', sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 48px;
 }
 
 /* Hero section */
+.hero-section {
+    /* padding: 8.26px 706px 63.24px 205px; */
+    padding: 8.26px 0 63.24px 0;
+}
+
+.hero-second-title {
+    margin-bottom: 16px;
+}
+
 .hero-title {
     color: var(--color-brand-light);
     font-family: 'Play', sans-serif;
     font-size: 140px;
     font-weight: 700;
     line-height: 0.8;
+    margin-bottom: 40px;
 }
 
 .hero-button-description {
@@ -164,35 +210,28 @@ a {
     font-size: 12px;
     line-height: 1.5;
     text-align: center;
-}
-
-/* Section title */
-.section-title {
-    font-family: 'Play', sans-serif;
-    font-size: 64px;
-    font-weight: 700;
-    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 0;
 }
 
 /* About section */
+.about-section {
+    /* padding: 63.24px 100px 88px; */
+    padding: 63.24px 0 88px;
+}
+
 .about-section .section-title {
     text-align: left;
+    margin-bottom: 40px;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  clip: rect(0 0 0 0);
-}
-
-.about-section-text {
+.about-section-text{
     font-size: 22px;
     line-height: 1.73;
+}
+
+.about-section-intro {
+    margin-bottom: 40px;
 }
 
 .about-section .text-bold {
@@ -200,45 +239,76 @@ a {
 }
 
 /* Why us section */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
 .why-us-section {
     font-size: 18px;
     line-height: 1.33;
     text-align: center;
+    /* padding: 88px 190px 48px; */
+    padding: 88px 0 48px;
 }
 
 /* Procedures section */
+.procedures-section {
+    /* padding: 48px 112px 48px; */
+    padding: 48px 0 48px;
+}
+
 .procedures-article-title {
     color: var(--color-background-light);
     font-size: 24px;
     line-height: 1.18;
     text-align: center;
+    margin: 372px 77px 32px 115px;
 }
 
 /* Contact section */
+.contact-section {
+    /* padding: 48px 205px 96px 176px; */
+    padding: 48px 0 96px;
+}
+
 .contact-form-title {
     color: var(--color-background-light);
     font-size: 22px;
     font-weight: 600;
     line-height: 1.18;
     text-align: center;
+    margin-bottom: 32px;
 }
 
 .contact-form-privacy {
-    color: var(--color-privacy-policy);
+    color: var(--color-grey);
     font-size: 12px;
     line-height: 1.5;
     text-align: center;
+    margin-bottom: 48px;
 }
 
 /* Footer */
+.footer {
+    background-color: var(--color-primery-dark);
+}
+
 .address-link {
+    margin-bottom: 16px;
     color: var(--color-background-light);
     font-size: 16px;
     line-height: 1.2;
 }
 
 .text-privacy-policy {
-    color: var(--color-privacy-policy);
+    color: var(--color-grey);
     font-size: 13px;
     line-height: 1.53;
 }
