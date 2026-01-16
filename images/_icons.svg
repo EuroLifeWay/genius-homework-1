@@ -1,8 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" overflow="hidden" style="position:absolute;width:0;height:0">
   <defs>
-    <symbol id="icon-btn-close" viewBox="0 0 32 32">
-      <path stroke-linecap="round" stroke-width="2" d="m8 8 8 8 8-8M8 24l8-8 8 8"/>
-    </symbol>
     <symbol id="icon-star-1" viewBox="0 0 32 32">
       <path d="M6.693 0 17.35 10.184l14.321-3.491L21.487 17.35l3.491 14.321-10.657-10.184L0 24.978l10.184-10.657L6.693 0z"/>
     </symbol>
