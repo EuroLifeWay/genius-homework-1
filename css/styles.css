@@ -506,6 +506,10 @@ textarea {
   pointer-events: none;
 }
 
+.why-us__container {
+  padding: 0 90px;
+}
+
 .why-us-text {
   font-size: 18px;
   line-height: 1.33;
@@ -518,7 +522,6 @@ textarea {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 56px;
-  padding: 0 90px;
 }
 
 .why-us__item {
