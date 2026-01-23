@@ -637,8 +637,8 @@ textarea {
 }
 
 .contact__container {
-  padding: 0 90px;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 32px;
 }
