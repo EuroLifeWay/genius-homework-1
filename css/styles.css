@@ -360,11 +360,11 @@ textarea {
   /* width: 100%; */
 }
 
-.section-title.about__title {
+.section__title.about__title {
   margin-top: 40px;
 }
 
-.section-title.text-left {
+.section__title.text-left {
   text-align: left;
 }
 
@@ -385,7 +385,7 @@ textarea {
   width: 100%;
 }
 
-.about__section .section-title {
+.about__section .section__title {
   max-width: 529px;
   margin-bottom: 0;
 }
