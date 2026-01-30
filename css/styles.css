@@ -148,7 +148,7 @@ button {
 input,
 textarea {
   font-family: inherit;
-  font-weight: inherit;
+  /* font-weight: inherit; */
 }
 
 .container {
@@ -161,7 +161,7 @@ textarea {
 
 /* Buttons */
 .button {
-  padding: 16px 32px;
+  padding: 16px 52px;
   margin-bottom: 8px;
   width: auto;
   border: 2px solid var(--color-brand-light);
@@ -195,7 +195,7 @@ textarea {
 }
 
 /* Section title */
-.section-title {
+.section__title {
   font-family: 'Play', sans-serif;
   font-size: 64px;
   font-weight: 700;
@@ -266,7 +266,7 @@ textarea {
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover; */
-  padding: 122.5px 0 100px;
+  padding: 122.5px 0 126.5px;
 }
 
 .hero__section::before {
@@ -331,11 +331,11 @@ textarea {
 .hero__button-container {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
+  align-items: flex-start;
   gap: 6px;
 }
 
-.button.hero__button:hover {
+.hero__button:hover {
   background-color: transparent;
 }
 
@@ -558,7 +558,7 @@ textarea {
 
 /* Procedures section */
 .procedures__section {
-  padding: 48px 0 68px;
+  padding: 48px 0 48px;
 }
 
 .procedures__container {
@@ -636,7 +636,7 @@ textarea {
 
 /* Contact section */
 .contact__section {
-  padding: 68px 0 96px;
+  padding: 48px 0 96px;
 }
 
 .contact__container {
@@ -834,12 +834,12 @@ textarea {
   cursor: pointer;
 }
 
-.modal_title {
+.modal__title {
   margin-bottom: 40px;
   color: var(--color-background);
 }
 
-.form_title {
+.form__title {
   width: 274px;
   margin: 0 auto 32px;
   color: var(--color-background);
@@ -855,14 +855,15 @@ textarea {
   gap: 24px;
 }
 
-.form_field {
+.form__field {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.form_input {
+.form__input {
   font-size: 13px;
+  font-weight: inherit;
   width: 100%;
   padding: 18px 33px;
   color: var(--color-background);
@@ -871,22 +872,17 @@ textarea {
   border-radius: 32px;
 }
 
-.form_input::placeholder {
+.form__input::placeholder {
   color: var(--color-background);
 }
 
-.form_input:focus,
-.form_input:hover {
+.form__input:focus,
+.form__input:hover {
   background-color: var(--color-grey);
   outline: none;
 }
 
-.form_button {
-  display: block;
-  margin: 0 auto;
-}
-
-.form_pryvacy {
+.form__pryvacy {
   font-size: 12px;
   line-height: 1.5;
   width: 216px;
@@ -894,7 +890,7 @@ textarea {
   color: var(--color-grey);
 }
 
-.form_pryvacy-link {
+.form__pryvacy-link {
   text-decoration: underline;
   text-underline-offset: 2px;
   color: var(--color-grey);
