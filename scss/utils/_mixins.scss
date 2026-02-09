@@ -1,0 +1,37 @@
+@mixin position($top: none, $right: none, $bottom: none, $left: none) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin star-style(
+  $size,
+  $t: none,
+  $r: none,
+  $b: none,
+  $l: none,
+  $color: currentColor
+) {
+  position: absolute;
+  width: $size;
+  height: $size;
+  fill: $color;
+
+  @include position($t, $r, $b, $l);
+}
+
+// @mixin star-style($size, $t: none, $r: none, $b: none, $l: none, $color) {
+//   width: $size;
+//   height: $size;
+//   top: $t;
+//   right: $r;
+//   bottom: $b;
+//   left: $l;
+//   fill: $color;
+// }
+
+// background-image: url('../images/icons.svg#icon-star-#{$icon}');
+//   // fill: #{$color};
+//   // fill: var(#{$color});

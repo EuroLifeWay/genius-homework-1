@@ -1,0 +1,17 @@
+@use '../utils/variables' as var;
+
+.text-bold {
+  font-weight: 600;
+}
+
+.text-brand {
+  color: var.$color-brand-light;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.centered {
+  text-align: center;
+}

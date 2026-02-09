@@ -1,0 +1,9 @@
+@use '../utils/variables' as var;
+
+.link {
+  transition: color 0.2s;
+  &:hover {
+    color: var.$color-brand-light;
+    /* font-weight: 700; */
+  }
+}

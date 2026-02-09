@@ -1,0 +1,70 @@
+@use '../utils/variables' as var;
+
+.footer {
+  position: relative;
+  padding: 56px 0;
+  background-color: var.$color-primery-dark;
+  background-image: url('../images/footer-vector.svg');
+
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 247px;
+    height: 152px;
+    background-image: url('../images/footer-bg-image.webp');
+    content: '';
+  }
+
+  &__container {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__nav,
+  &__address {
+    display: flex;
+    flex-basis: 50%;
+    gap: 20px;
+  }
+
+  &__logo,
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__logo {
+    flex-shrink: 0;
+  }
+
+  &__address {
+    justify-content: space-between;
+  }
+
+  &__address-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__icons-list {
+    display: flex;
+    gap: 24px;
+    fill: v.$color-background;
+  }
+
+  &__nav-link,
+  &__address-link {
+    margin-bottom: 16px;
+    color: var.$color-background;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  &__privacy-policy {
+    color: var.$color-grey;
+    font-size: 13px;
+    line-height: 1.53;
+  }
+}

@@ -1,0 +1,41 @@
+@use '../utils/variables' as var;
+
+.contact-section {
+  padding: 48px 0 96px;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
+  &__map {
+    flex-shrink: 0;
+    width: 605px;
+    height: 486px;
+    border: none;
+    border-radius: 32px;
+  }
+
+  &__form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 56px;
+    flex-grow: 1;
+    /* flex-basis: 100%; */
+    max-width: 423px;
+    background-color: var.$color-primery-dark;
+    background-image: url('../images/modal-form-vector.svg');
+    border-radius: 32px;
+  }
+
+  &__form {
+    gap: 16px;
+  }
+
+  &__form-title {
+    margin-bottom: 16px;
+  }
+}

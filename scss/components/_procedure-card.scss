@@ -1,0 +1,30 @@
+@use '../utils/variables' as var;
+
+.procedure-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 344px;
+  height: 456px;
+  padding: 32px 77px 32px 115px;
+  color: var.$color-background;
+  background-image: var.$bg-image-gradient;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 4px 120px;
+  overflow: hidden;
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 1.18;
+    text-align: center;
+  }
+}

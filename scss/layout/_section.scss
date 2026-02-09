@@ -1,0 +1,8 @@
+@use '../utils/variables' as var;
+
+.section__title {
+  font-family: var.$font-title;
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 48px;
+}
