@@ -1,5 +1,6 @@
-@use '../utils/variables' as v;
+// @use '../utils/variables' as v;
 @use '../utils/mixins' as mix;
+@use '../utils' as *;
 
 .decor-stars {
   &__big {
@@ -13,7 +14,7 @@
 
       @include mix.star-style(40px, $r: 0px, $b: -70px);
 
-      background-color: v.$color-decor;
+      background-color: $color-decor;
       -webkit-mask: url('../images/star-1.svg') no-repeat center / contain;
       mask: url('../images/star-1.svg') no-repeat center / contain;
       mask-mode: alpha;
@@ -28,11 +29,11 @@
         }
       }
 
-      @media screen and (min-width: v.$bp-tablet) {
+      @media screen and (min-width: $bp-tablet) {
         @include mix.star-style(52px, $t: -16px, $l: -32px);
       }
 
-      @media screen and (min-width: v.$bp-desktop) {
+      @media screen and (min-width: $bp-desktop) {
         @include mix.star-style(64px, $t: -16px, $l: -32px);
       }
     }
@@ -41,7 +42,7 @@
       &::before {
         content: '';
 
-        @media screen and (min-width: v.$bp-tablet) {
+        @media screen and (min-width: $bp-tablet) {
           display: none;
         }
       }
@@ -59,21 +60,21 @@
         30px,
         $t: 32px,
         $r: 32px,
-        $color: v.$color-brand-light
+        $color: $color-brand-light
       );
 
-      @media screen and (min-width: v.$bp-desktop) {
+      @media screen and (min-width: $bp-desktop) {
         @include mix.star-style(
           40px,
           $t: 32px,
           $r: 32px,
-          $color: v.$color-brand-light
+          $color: $color-brand-light
         );
       }
     }
 
     &--small {
-      @include mix.star-style(16px, $r: 68px, $b: 40px, $color: v.$color-grey);
+      @include mix.star-style(16px, $r: 68px, $b: 40px, $color: $color-grey);
     }
 
     @keyframes magic-star {
@@ -97,7 +98,7 @@
       }
     }
 
-    @media screen and (min-width: v.$bp-desktop) {
+    @media screen and (min-width: $bp-desktop) {
       @keyframes magic-star {
         0% {
           transform: translate(0) rotate(0deg) scale(0.8);

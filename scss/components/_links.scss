@@ -1,10 +1,11 @@
-@use '../utils/variables' as v;
+// @use '../utils/variables' as v;
+@use '../utils' as *;
 
 .link {
   transition: color 0.2s;
 
   &:hover {
-    color: v.$color-brand-light;
+    color: $color-brand-light;
     /* font-weight: 700; */
   }
 }

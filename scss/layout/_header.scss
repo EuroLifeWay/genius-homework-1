@@ -1,4 +1,5 @@
-@use '../utils/variables' as v;
+// @use '../utils/variables' as v;
+@use '../utils' as *;
 
 .header {
   position: absolute;
@@ -7,7 +8,7 @@
   background-color: transparent;
   z-index: 2;
 
-  @media screen and (min-width: v.$bp-tablet) {
+  @media screen and (min-width: $bp-tablet) {
     padding: 32px 0;
     background-color: rgba(255, 255, 255, 0.25);
   }
@@ -24,7 +25,7 @@
     height: 30px;
     flex-shrink: 0;
 
-    @media screen and (min-width: v.$bp-tablet) {
+    @media screen and (min-width: $bp-tablet) {
       width: auto;
       height: auto;
     }
@@ -33,7 +34,7 @@
   &__nav-list {
     display: none;
 
-    @media screen and (min-width: v.$bp-tablet) {
+    @media screen and (min-width: $bp-tablet) {
       display: flex;
       justify-content: flex-end;
       align-items: center;
@@ -41,22 +42,22 @@
       gap: 56px;
     }
 
-    @media screen and (min-width: v.$bp-desktop) {
+    @media screen and (min-width: $bp-desktop) {
       justify-content: center;
     }
   }
 
   &__link {
-    color: v.$color-primery-light;
+    color: $color-primery-light;
   }
 
   &__icons-list {
     display: none;
 
-    @media screen and (min-width: v.$bp-desktop) {
+    @media screen and (min-width: $bp-desktop) {
       display: flex;
       gap: 32px;
-      fill: v.$color-primery-dark;
+      fill: $color-primery-dark;
     }
   }
 
@@ -67,9 +68,9 @@
     padding: 0;
     border: none;
     background-color: transparent;
-    fill: v.$color-background;
+    fill: $color-background;
 
-    @media screen and (min-width: v.$bp-tablet) {
+    @media screen and (min-width: $bp-tablet) {
       display: none;
     }
   }

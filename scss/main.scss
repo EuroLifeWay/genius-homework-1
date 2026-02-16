@@ -1,6 +1,7 @@
-@use './utils/fonts';
-@use './utils/variables';
-@use './utils/mixins';
+@use 'utils'; // Подключит сразу variables, mixins и fonts через их _index.scss
+// @use './utils/fonts';
+// @use './utils/variables';
+// @use './utils/mixins';
 
 /* vendors */
 
@@ -11,24 +12,23 @@
 @use './components/buttons';
 @use './components/carousel-button';
 @use './components/decor-stars';
-@use './components/decor-waves';
+@use './components/form';
 @use './components/icons';
 @use './components/links';
-@use './components/form';
-@use './components/procedure-card';
 @use './components/pagination';
+@use './components/procedure-card';
 
 @use './layout/section';
 @use './layout/container';
-@use './layout/header';
-@use './layout/mobile-menu';
-@use './layout/hero-section';
 @use './layout/about-section';
-@use './layout/why-us-section';
-@use './layout/procedures-section';
 @use './layout/contact-section';
 @use './layout/footer';
+@use './layout/header';
+@use './layout/hero-section';
+@use './layout/mobile-menu';
 @use './layout/modal';
+@use './layout/procedures-section';
+@use './layout/why-us-section';
 
 /* pages */
 /* themes */

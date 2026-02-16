@@ -1,13 +1,14 @@
-@use '../utils/variables' as v;
+// @use '../utils/variables' as v;
+@use '../utils' as *;
 
 .contact-section {
   padding: 20px 0 0;
 
-  @media screen and (min-width: v.$bp-tablet) {
+  @media screen and (min-width: $bp-tablet) {
     padding-bottom: 48px;
   }
 
-  @media screen and (min-width: v.$bp-desktop) {
+  @media screen and (min-width: $bp-desktop) {
     padding: 48px 0 96px;
   }
 
@@ -17,13 +18,13 @@
     justify-content: center;
     gap: 24px;
 
-    @media screen and (min-width: v.$bp-tablet) {
+    @media screen and (min-width: $bp-tablet) {
       flex-direction: row;
       justify-content: center;
       // flex-wrap: wrap;
     }
 
-    @media screen and (min-width: v.$bp-desktop) {
+    @media screen and (min-width: $bp-desktop) {
       padding: 0 76px;
       gap: 32px;
     }
@@ -35,7 +36,7 @@
     margin: 0 -20px;
     border: none;
 
-    @media screen and (min-width: v.$bp-tablet) {
+    @media screen and (min-width: $bp-tablet) {
       flex-grow: 1;
       // width: 100%;
       // min-width: 421px;
@@ -44,7 +45,7 @@
       border-radius: 32px;
     }
 
-    // @media screen and (min-width: v.$bp-desktop) {
+    // @media screen and (min-width: $bp-desktop) {
     //   width: 605px;
     // }
   }
@@ -55,11 +56,11 @@
     align-items: center;
     padding: 48px 56px;
     // flex-grow: 1;
-    background-color: v.$color-primery-dark;
+    background-color: $color-primery-dark;
     background-image: url('../images/modal-form-vector.svg');
     border-radius: 32px;
 
-    @media screen and (min-width: v.$bp-desktop) {
+    @media screen and (min-width: $bp-desktop) {
       min-width: 423px;
     }
   }

@@ -1,13 +1,14 @@
-@use '../utils/variables' as v;
+// @use '../utils/variables' as v;
+@use '../utils' as *;
 
 .section__title {
-  font-family: v.$font-title;
+  font-family: $font-title;
   font-size: 32px;
   font-weight: 500;
   line-height: 1.187;
   margin-bottom: 24px;
 
-  @media screen and (min-width: v.$bp-desktop) {
+  @media screen and (min-width: $bp-desktop) {
     font-size: 64px;
     font-weight: 700;
     line-height: 0.81;

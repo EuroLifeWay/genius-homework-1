@@ -1,4 +1,5 @@
-@use '../utils/variables' as v;
+// @use '../utils/variables' as v;
+@use '../utils' as *;
 
 .mobile-menu {
   position: fixed;
@@ -8,8 +9,8 @@
   width: 100%;
   height: 100%;
   padding: 16px 20px;
-  fill: v.$color-primery-dark;
-  background-color: v.$color-background;
+  fill: $color-primery-dark;
+  background-color: $color-background;
   transform: translateX(100%);
   transition: transform 0.3s;
   z-index: 3;
@@ -23,7 +24,7 @@
     width: 57px;
     height: 30px;
     margin-bottom: 32px;
-    fill: v.$color-brand-light;
+    fill: $color-brand-light;
   }
 
   &__btn-close {
@@ -31,8 +32,8 @@
     right: 24px;
     width: 24px;
     height: 24px;
-    stroke: v.$color-primery-dark;
-    // fill: v.$color-primery-dark;
+    stroke: $color-primery-dark;
+    // fill: $color-primery-dark;
   }
 
   &__menu {
@@ -44,7 +45,7 @@
   &__link {
     font-size: 14px;
     line-height: 1.14;
-    color: v.$color-primery-dark;
+    color: $color-primery-dark;
 
     &:hover {
       font-weight: 700;

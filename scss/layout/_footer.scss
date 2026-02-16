@@ -1,19 +1,20 @@
-@use '../utils/variables' as v;
+// @use '../utils/variables' as v;
+@use '../utils' as *;
 
 .footer {
   position: relative;
   padding: 32px 0 66px;
-  background-color: v.$color-primery-dark;
+  background-color: $color-primery-dark;
   background-image: url('../images/footer-vector.svg');
 
-  @media screen and (min-width: v.$bp-tablet) {
+  @media screen and (min-width: $bp-tablet) {
     padding: 56px 0;
   }
 
   &::after {
     display: none;
 
-    @media screen and (min-width: v.$bp-desktop) {
+    @media screen and (min-width: $bp-desktop) {
       display: block;
       content: '';
       position: absolute;
@@ -31,7 +32,7 @@
     align-items: center;
     gap: 16px;
 
-    @media screen and (min-width: v.$bp-tablet) {
+    @media screen and (min-width: $bp-tablet) {
       flex-direction: row;
       align-items: flex-start;
       gap: 20px;
@@ -45,7 +46,7 @@
     align-items: center;
     gap: 16px;
 
-    @media screen and (min-width: v.$bp-tablet) {
+    @media screen and (min-width: $bp-tablet) {
       flex-direction: row;
       align-items: flex-start;
       flex-basis: 50%;
@@ -60,7 +61,7 @@
     align-items: center;
     gap: 16px;
 
-    @media screen and (min-width: v.$bp-tablet) {
+    @media screen and (min-width: $bp-tablet) {
       align-items: flex-start;
       flex-grow: 1;
     }
@@ -69,13 +70,13 @@
   &__logo {
     margin-bottom: 26px;
 
-    @media screen and (min-width: v.$bp-tablet) {
+    @media screen and (min-width: $bp-tablet) {
       flex-shrink: 0;
     }
   }
 
   &__address {
-    @media screen and (min-width: v.$bp-tablet) {
+    @media screen and (min-width: $bp-tablet) {
       justify-content: space-between;
     }
   }
@@ -84,7 +85,7 @@
     & > * {
       display: none;
 
-      @media screen and (min-width: v.$bp-tablet) {
+      @media screen and (min-width: $bp-tablet) {
         display: flex;
       }
     }
@@ -95,7 +96,7 @@
       align-items: center;
     }
 
-    @media screen and (min-width: v.$bp-tablet) {
+    @media screen and (min-width: $bp-tablet) {
       display: flex;
       flex-direction: column;
       gap: 16px;
@@ -105,20 +106,20 @@
   &__icons-list {
     display: flex;
     gap: 16px;
-    fill: v.$color-background;
+    fill: $color-background;
 
-    @media screen and (min-width: v.$bp-tablet) {
+    @media screen and (min-width: $bp-tablet) {
       gap: 24px;
     }
   }
 
   &__nav-link,
   &__address-link {
-    color: v.$color-background;
+    color: $color-background;
     font-size: 14px;
     line-height: 1.142;
 
-    @media screen and (min-width: v.$bp-desktop) {
+    @media screen and (min-width: $bp-desktop) {
       font-size: 16px;
       line-height: 1.187;
     }
@@ -130,18 +131,18 @@
     align-items: center;
     gap: 16px;
 
-    @media screen and (min-width: v.$bp-tablet) {
+    @media screen and (min-width: $bp-tablet) {
       align-items: flex-start;
     }
   }
 
   &__privacy-policy {
-    color: v.$color-grey;
+    color: $color-grey;
     font-size: 12px;
     line-height: 1.53;
     margin: 0;
 
-    @media screen and (min-width: v.$bp-tablet) {
+    @media screen and (min-width: $bp-tablet) {
       font-size: 13px;
     }
   }

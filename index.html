@@ -108,29 +108,31 @@
                   >Контакти</a
                 >
               </li>
-              <ul class="mobile-menu__icons-list">
-                <li class="icon-item">
-                  <a href="#">
-                    <svg class="icon-item__icon" width="32" height="32">
-                      <use href="./images/icons.svg#icon-telephone"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="icon-item">
-                  <a href="">
-                    <svg class="icon-item__icon" width="32" height="32">
-                      <use href="./images/icons.svg#icon-facebook"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="icon-item">
-                  <a href="#">
-                    <svg class="icon-item__icon" width="32" height="32">
-                      <use href="./images/icons.svg#icon-instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
+              <li>
+                <ul class="mobile-menu__icons-list">
+                  <li class="icon-item">
+                    <a href="#">
+                      <svg class="icon-item__icon" width="32" height="32">
+                        <use href="./images/icons.svg#icon-telephone"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="icon-item">
+                    <a href="">
+                      <svg class="icon-item__icon" width="32" height="32">
+                        <use href="./images/icons.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="icon-item">
+                    <a href="#">
+                      <svg class="icon-item__icon" width="32" height="32">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </li>
             </ul>
           </div>
         </nav>
@@ -422,12 +424,12 @@
                 <div class="form__field">
                   <label
                     class="form__lable visually-hidden"
-                    for="user-name"
+                    for="contact-user-name"
                   ></label>
                   <input
                     class="form__input"
                     type="text"
-                    id="user-name"
+                    id="contact-user-name"
                     name="user-name"
                     placeholder="Ваше Ім‘я та прізвище"
                     pattern="^(?=(?:[^'\-]*['\-]){0,1}[^'\-]*\s)(?=.*\s(?:[^'\-]*['\-]){0,1}[^'\-]*$)[\p{L}][\p{L}\-']{0,10}[\p{L}]\s[\p{L}][\p{L}\-']{0,10}[\p{L}]$"
@@ -437,12 +439,12 @@
                 <div class="form__field">
                   <label
                     class="form__lable visually-hidden"
-                    for="user-tel"
+                    for="contact-user-tel"
                   ></label>
                   <input
                     class="form__input"
                     type="text"
-                    id="user-tel"
+                    id="contact-user-tel"
                     name="user-tel"
                     placeholder="Ваш номер телефону"
                     pattern="^\+380[0-9]{9}$"
@@ -452,18 +454,19 @@
                 <div class="form__field">
                   <label
                     class="form__lable visually-hidden"
-                    for="user-email"
+                    for="contact-user-email"
                   ></label>
                   <input
                     class="form__input"
                     type="text"
-                    id="user-email"
+                    id="contact-user-email"
                     name="user-email"
                     placeholder="Ваша електронна пошта"
                     pattern="^[a-zA-Z0-9._%+\-]{2,20}@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,20}$"
                     required
                   />
                 </div>
+                <input type="hidden" name="form_id" value="contact_form" />
                 <div>
                   <button class="button" type="submit">
                     Записатись безкоштовно
@@ -593,11 +596,14 @@
             подарунок
           </h3>
           <div class="form__field">
-            <label class="form__lable visually-hidden" for="user-name"></label>
+            <label
+              class="form__lable visually-hidden"
+              for="modal-user-name"
+            ></label>
             <input
               class="form__input"
               type="text"
-              id="user-name"
+              id="modal-user-name"
               name="user-name"
               placeholder="Ваше Ім‘я та прізвище"
               pattern="^(?=(?:[^'\-]*['\-]){0,1}[^'\-]*\s)(?=.*\s(?:[^'\-]*['\-]){0,1}[^'\-]*$)[\p{L}][\p{L}\-']{0,10}[\p{L}]\s[\p{L}][\p{L}\-']{0,10}[\p{L}]$"
@@ -607,11 +613,14 @@
               maxlength="41" -->
           </div>
           <div class="form__field">
-            <label class="form__lable visually-hidden" for="user-tel"></label>
+            <label
+              class="form__lable visually-hidden"
+              for="modal-user-tel"
+            ></label>
             <input
               class="form__input"
               type="text"
-              id="user-tel"
+              id="modal-user-tel"
               name="user-tel"
               placeholder="Ваш номер телефону"
               pattern="^\+380[0-9]{9}$"
@@ -619,17 +628,21 @@
             />
           </div>
           <div class="form__field">
-            <label class="form__lable visually-hidden" for="user-email"></label>
+            <label
+              class="form__lable visually-hidden"
+              for="modal-user-email"
+            ></label>
             <input
               class="form__input"
               type="text"
-              id="user-email"
+              id="modal-user-email"
               name="user-email"
               placeholder="Ваша електронна пошта"
               pattern="^[a-zA-Z0-9._%+\-]{2,20}@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,20}$"
               required
             />
           </div>
+          <input type="hidden" name="form_id" value="modal_form" />
           <div class="form__button-container">
             <button class="button" type="submit">Записатись безкоштовно</button>
             <p class="form__pryvacy centered">

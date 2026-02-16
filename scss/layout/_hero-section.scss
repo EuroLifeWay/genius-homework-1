@@ -1,4 +1,5 @@
-@use '../utils/variables' as v;
+// @use '../utils/variables' as v;
+@use '../utils' as *;
 
 .hero-section {
   position: relative;
@@ -17,7 +18,7 @@
   padding: 70px 0 28px;
   // z-index: -2;
 
-  @media screen and (min-width: v.$bp-desktop) {
+  @media screen and (min-width: $bp-desktop) {
     background-position: right top;
     background-size: contain;
     padding: 122.5px 0 126.5px;
@@ -66,7 +67,7 @@
         url('../images/hero-bg-image@2x.webp');
     }
 
-    // @media screen and (min-width: v.$bp-desktop) {
+    // @media screen and (min-width: $bp-desktop) {
     //   background-position: right top;
     //   background-size: contain;
     // }
@@ -91,7 +92,7 @@
     background-size: contain;
     z-index: -1;
 
-    @media screen and (min-width: v.$bp-tablet) {
+    @media screen and (min-width: $bp-tablet) {
       background-size: cover;
       /* transform: rotate(180deg) scale(-1, 1); */
       // z-index: -1; // for &::before
@@ -104,7 +105,7 @@
     align-items: center;
     /* justify-content: center; */
 
-    @media screen and (min-width: v.$bp-tablet) {
+    @media screen and (min-width: $bp-tablet) {
       align-items: flex-start;
       padding-left: 106px;
     }
@@ -114,22 +115,22 @@
     font-size: 12px;
     margin-bottom: 0;
 
-    @media screen and (min-width: v.$bp-tablet) {
+    @media screen and (min-width: $bp-tablet) {
       margin-bottom: 16px;
     }
   }
 
   &__title {
-    font-family: v.$font-title;
+    font-family: $font-title;
     font-size: 54px;
     font-weight: 700;
     line-height: 0.85;
     margin-bottom: 32px;
-    color: v.$color-brand-light;
+    color: $color-brand-light;
 
-    @media screen and (min-width: v.$bp-tablet) {
-      color: v.$color-brand-light;
-      font-family: v.$font-title;
+    @media screen and (min-width: $bp-tablet) {
+      color: $color-brand-light;
+      font-family: $font-title;
       font-size: 140px;
       line-height: 0.85;
       max-width: 530px;
@@ -143,7 +144,7 @@
     align-items: center;
     gap: 8px;
 
-    @media screen and (min-width: v.$bp-tablet) {
+    @media screen and (min-width: $bp-tablet) {
       align-items: flex-start;
       gap: 14px;
     }
@@ -160,9 +161,9 @@
     line-height: 1.64;
     text-align: center;
     max-width: 238px;
-    color: v.$color-primery-light;
+    color: $color-primery-light;
 
-    @media screen and (min-width: v.$bp-tablet) {
+    @media screen and (min-width: $bp-tablet) {
       font-size: 12px;
       line-height: 1.5;
       margin-bottom: 0;

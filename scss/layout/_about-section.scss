@@ -1,10 +1,10 @@
-@use '../utils/variables' as v;
-@use '../utils/mixins' as mix;
+// @use '../utils/variables' as v;
+@use '../utils' as *;
 
 .about-section {
   padding: 24px 0 52px;
 
-  @media screen and (min-width: v.$bp-desktop) {
+  @media screen and (min-width: $bp-desktop) {
     padding: 24px 0 88px;
   }
 
@@ -20,7 +20,7 @@
     flex-direction: column;
     gap: 16px;
 
-    @media screen and (min-width: v.$bp-desktop) {
+    @media screen and (min-width: $bp-desktop) {
       gap: 40px;
     }
   }
@@ -28,7 +28,7 @@
   &__text-container {
     // max-width: 320px;
 
-    @media screen and (min-width: v.$bp-desktop) {
+    @media screen and (min-width: $bp-desktop) {
       max-width: 700px;
     }
   }
@@ -36,14 +36,14 @@
   &__photo-container {
     display: none;
 
-    @media screen and (min-width: v.$bp-tablet) {
+    @media screen and (min-width: $bp-tablet) {
       display: flex;
       min-width: 178px;
       flex-basis: 100%;
       // flex-grow: 1;
     }
 
-    @media screen and (min-width: v.$bp-desktop) {
+    @media screen and (min-width: $bp-desktop) {
       min-width: 327px;
     }
   }
@@ -51,7 +51,7 @@
   &__title {
     margin-bottom: 8px;
 
-    @media screen and (min-width: v.$bp-tablet) {
+    @media screen and (min-width: $bp-tablet) {
       margin-bottom: 0;
     }
   }
@@ -59,11 +59,11 @@
   &__text {
     margin-bottom: 0;
 
-    @media screen and (min-width: v.$bp-tablet) {
+    @media screen and (min-width: $bp-tablet) {
       line-height: 1.73;
     }
 
-    @media screen and (min-width: v.$bp-desktop) {
+    @media screen and (min-width: $bp-desktop) {
       font-size: 22px;
     }
   }
@@ -77,12 +77,12 @@
   }
 
   &__photo {
-    @media screen and (min-width: v.$bp-tablet) {
+    @media screen and (min-width: $bp-tablet) {
       width: 260px;
       border-radius: 50%;
     }
 
-    @media screen and (min-width: v.$bp-desktop) {
+    @media screen and (min-width: $bp-desktop) {
       width: 328px;
     }
   }

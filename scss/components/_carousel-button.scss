@@ -1,4 +1,5 @@
-@use '../utils/variables' as v;
+// @use '../utils/variables' as v;
+@use '../utils' as *;
 
 .carousel-button {
   display: flex;
@@ -8,16 +9,16 @@
   width: 44px;
   height: 44px;
   padding: 0;
-  fill: v.$color-primery-dark;
+  fill: $color-primery-dark;
   background-color: transparent;
-  border: 1px solid v.$color-primery-dark;
+  border: 1px solid $color-primery-dark;
   border-radius: 50%;
   cursor: pointer;
 
   &:hover {
-    fill: v.$color-background;
-    background-color: v.$color-brand-light;
-    border: 1px solid v.$color-background;
+    fill: $color-background;
+    background-color: $color-brand-light;
+    border: 1px solid $color-background;
   }
 
   &.next {

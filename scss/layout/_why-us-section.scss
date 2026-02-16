@@ -1,10 +1,11 @@
-@use '../utils/variables' as v;
+// @use '../utils/variables' as v;
+@use '../utils' as *;
 
 .why-us-section {
   position: relative;
   padding: 52px 0 20px;
 
-  @media screen and (min-width: v.$bp-tablet) {
+  @media screen and (min-width: $bp-tablet) {
     padding: 88px 0 48px;
   }
 
@@ -29,11 +30,11 @@
   }
 
   &__container {
-    @media screen and (min-width: 480px) and (max-width: v.$bp-tablet) {
+    @media screen and (min-width: 480px) and (max-width: $bp-tablet) {
       padding: 0 48px;
     }
 
-    @media screen and (min-width: v.$bp-desktop) {
+    @media screen and (min-width: $bp-desktop) {
       padding: 0 90px;
     }
   }
@@ -50,19 +51,19 @@
     flex-direction: column;
     gap: 16px;
 
-    @media screen and (min-width: v.$bp-tablet) {
+    @media screen and (min-width: $bp-tablet) {
       flex-direction: row;
       justify-content: space-evenly;
     }
 
-    @media screen and (min-width: v.$bp-desktop) {
+    @media screen and (min-width: $bp-desktop) {
       justify-content: space-between;
       gap: 56px;
     }
   }
 
   &__item {
-    @media screen and (min-width: v.$bp-tablet) {
+    @media screen and (min-width: $bp-tablet) {
       flex-basis: calc((100% - 112px) / 3);
     }
   }
@@ -74,8 +75,8 @@
     gap: 12px;
     height: 100%;
     padding: 24px 32px;
-    background-color: v.$color-background;
-    fill: v.$color-brand-light;
+    background-color: $color-background;
+    fill: $color-brand-light;
     border-radius: 32px;
     box-shadow: 0 4px 4px 0 rgba(168, 198, 245, 0.38);
   }

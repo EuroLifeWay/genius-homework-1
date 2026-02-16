@@ -1,11 +1,12 @@
-@use '../utils/variables' as v;
+// @use '../utils/variables' as v;
+@use '../utils' as *;
 
 .text-bold {
   font-weight: 600;
 }
 
 .text-brand {
-  color: v.$color-brand-light;
+  color: $color-brand-light;
 }
 
 .text-capitalize {
