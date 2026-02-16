@@ -1,28 +1,41 @@
-@use '../utils/variables' as var;
+@use '../utils/variables' as v;
 
 .why-us-section {
   position: relative;
-  padding: 88px 0 48px;
+  padding: 52px 0 20px;
+
+  @media screen and (min-width: v.$bp-tablet) {
+    padding: 88px 0 48px;
+  }
 
   &::before {
     content: '';
+    display: block;
     position: absolute;
     top: -122px;
     left: 50%;
     transform: translateX(-50%);
+    // left: 0;
     width: 100%;
-    min-width: 1440px;
     height: 1506px;
     background-image: url('../images/bg-body-wave.svg');
     background-repeat: no-repeat;
-    background-size: 100% 100%;
     background-position: center top;
+    // background-size: 1440px 100%;
+    // background-size: max(1440px, 100%) 100%;
+    background-size: clamp(1440px, 100%, 2560px) 100%;
     z-index: -1;
     pointer-events: none;
   }
 
   &__container {
-    padding: 0 90px;
+    @media screen and (min-width: 480px) and (max-width: v.$bp-tablet) {
+      padding: 0 48px;
+    }
+
+    @media screen and (min-width: v.$bp-desktop) {
+      padding: 0 90px;
+    }
   }
 
   &__text {
@@ -34,15 +47,24 @@
 
   &__list {
     display: flex;
-    // justify-content: space-between;
-    // flex-wrap: wrap;
-    gap: 56px;
+    flex-direction: column;
+    gap: 16px;
+
+    @media screen and (min-width: v.$bp-tablet) {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+
+    @media screen and (min-width: v.$bp-desktop) {
+      justify-content: space-between;
+      gap: 56px;
+    }
   }
 
   &__item {
-    // display: flex;
-    flex-basis: calc((100% - 112px) / 3);
-    // flex-grow: 1;
+    @media screen and (min-width: v.$bp-tablet) {
+      flex-basis: calc((100% - 112px) / 3);
+    }
   }
 
   &__card {
@@ -50,12 +72,10 @@
     flex-direction: column;
     align-items: center;
     gap: 12px;
-    // max-width: 316px;
-    min-height: 181px;
+    height: 100%;
     padding: 24px 32px;
-    background-color: var.$color-background;
-    fill: var.$color-brand-light;
-    /* border: 1px solid lightgray; */
+    background-color: v.$color-background;
+    fill: v.$color-brand-light;
     border-radius: 32px;
     box-shadow: 0 4px 4px 0 rgba(168, 198, 245, 0.38);
   }

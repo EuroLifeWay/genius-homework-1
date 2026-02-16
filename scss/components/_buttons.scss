@@ -1,19 +1,42 @@
-@use '../utils/variables' as var;
+@use '../utils/variables' as v;
 
 .button {
-  padding: 16px 52px;
-  margin-bottom: 8px;
-  width: auto;
-  border: 2px solid var.$color-brand-light;
-  border-radius: 32px;
-  color: var.$color-background;
-  background-color: var.$color-brand-light;
+  font-size: 16px;
   font-weight: 600;
+  line-height: 1.187;
+  padding: 12px 20px;
+  margin-bottom: 8px;
+  width: 100%;
+  max-width: 241px;
+  border: 2px solid v.$color-brand-light;
+  border-radius: 32px;
+  color: v.$color-background;
+  background-color: v.$color-brand-light;
   transition: color 0.2s;
+
+  @media screen and (min-width: v.$bp-tablet) {
+    font-size: 18px;
+    line-height: 1.166;
+    max-width: 281px;
+    padding: 16px 30px;
+    width: auto;
+  }
 }
 
 .button:hover {
-  color: var.$color-primery-dark;
+  color: v.$color-primery-dark;
   background-color: #dfdfdf;
-  border: 2px solid var.$color-brand-light;
+  border: 2px solid v.$color-brand-light;
+}
+
+.btn-close {
+  position: absolute;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }

@@ -1,4 +1,4 @@
-@use '../utils/variables' as var;
+@use '../utils/variables' as v;
 
 .form {
   display: flex;
@@ -6,20 +6,29 @@
   align-items: center;
   width: 100%;
   max-width: 310px;
-  gap: 24px;
+  gap: 16px;
+
+  @media screen and (min-width: v.$bp-tablet) {
+    gap: 24px;
+  }
 
   &__title {
     font-size: 22px;
     // font-weight: 600;
     line-height: 1.18;
     max-width: 274px;
-    margin-bottom: 0;
-    color: var.$color-background;
+    margin-bottom: 8px;
+    color: v.$color-background;
+
+    @media screen and (min-width: v.$bp-tablet) {
+      margin-bottom: 0;
+    }
   }
 
   &__field {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
   }
 
@@ -27,20 +36,39 @@
     font-size: 13px;
     font-weight: inherit;
     width: 100%;
-    padding: 18px 33px;
-    color: var.$color-background;
+    max-width: 241px;
+    padding: 16px 24px;
+    color: v.$color-background;
     background-color: transparent;
-    border: 2px solid var.$color-grey;
+    border: 2px solid v.$color-grey;
     border-radius: 32px;
 
+    @media screen and (min-width: v.$bp-tablet) {
+      max-width: 310px;
+      padding: 18px 33px;
+      margin: 0;
+    }
+
     &::placeholder {
-      color: var.$color-background;
+      color: v.$color-background;
     }
 
     &:focus,
     &:hover {
-      background-color: var.$color-grey;
+      background-color: v.$color-grey;
       outline: none;
+    }
+  }
+
+  &__button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 16px;
+
+    @media screen and (min-width: v.$bp-tablet) {
+      padding: 0;
     }
   }
 
@@ -49,12 +77,12 @@
     line-height: 1.5;
     max-width: 216px;
     margin: 0 auto;
-    color: var.$color-grey;
+    color: v.$color-grey;
 
     &--link-underline {
       text-decoration: underline;
       text-underline-offset: 2px;
-      color: var.$color-grey;
+      color: v.$color-grey;
     }
   }
 }

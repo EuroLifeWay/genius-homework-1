@@ -1,0 +1,58 @@
+@use '../utils/variables' as v;
+
+.mobile-menu {
+  position: fixed;
+  //   position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 16px 20px;
+  fill: v.$color-primery-dark;
+  background-color: v.$color-background;
+  transform: translateX(100%);
+  transition: transform 0.3s;
+  z-index: 3;
+
+  &.is-open {
+    transform: translateX(0);
+  }
+
+  &__logo {
+    // display: flex;
+    width: 57px;
+    height: 30px;
+    margin-bottom: 32px;
+    fill: v.$color-brand-light;
+  }
+
+  &__btn-close {
+    top: 16px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    stroke: v.$color-primery-dark;
+    // fill: v.$color-primery-dark;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 1.14;
+    color: v.$color-primery-dark;
+
+    &:hover {
+      font-weight: 700;
+    }
+  }
+
+  &__icons-list {
+    display: flex;
+    gap: 16px;
+  }
+}

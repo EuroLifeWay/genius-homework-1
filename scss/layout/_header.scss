@@ -1,11 +1,16 @@
-@use '../utils/variables' as var;
+@use '../utils/variables' as v;
 
 .header {
   position: absolute;
   width: 100%;
-  padding: 32px 0;
-  background-color: rgba(255, 255, 255, 0.25);
+  padding: 16px 0;
+  background-color: transparent;
   z-index: 2;
+
+  @media screen and (min-width: v.$bp-tablet) {
+    padding: 32px 0;
+    background-color: rgba(255, 255, 255, 0.25);
+  }
 
   &__container {
     display: flex;
@@ -15,24 +20,57 @@
   }
 
   &__logo {
+    width: 57px;
+    height: 30px;
     flex-shrink: 0;
+
+    @media screen and (min-width: v.$bp-tablet) {
+      width: auto;
+      height: auto;
+    }
   }
 
   &__nav-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    gap: 56px;
+    display: none;
+
+    @media screen and (min-width: v.$bp-tablet) {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-grow: 1;
+      gap: 56px;
+    }
+
+    @media screen and (min-width: v.$bp-desktop) {
+      justify-content: center;
+    }
   }
 
   &__link {
-    color: var.$color-primery-light;
+    color: v.$color-primery-light;
   }
 
   &__icons-list {
+    display: none;
+
+    @media screen and (min-width: v.$bp-desktop) {
+      display: flex;
+      gap: 32px;
+      fill: v.$color-primery-dark;
+    }
+  }
+
+  &__burger {
     display: flex;
-    gap: 32px;
-    fill: var.$color-primery-dark;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    fill: v.$color-background;
+
+    @media screen and (min-width: v.$bp-tablet) {
+      display: none;
+    }
   }
 }

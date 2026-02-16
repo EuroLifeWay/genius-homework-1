@@ -1,21 +1,38 @@
-.procedures-section {
-  padding: 48px 0 48px;
+@use '../utils/variables' as v;
 
-  &__container {
+.procedures-section {
+  padding: 20px 0;
+
+  @media screen and (min-width: v.$bp-tablet) {
+    padding: 48px 0;
+  }
+
+  &__slider {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 32px;
   }
 
-  &__list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 16px;
+  &__container {
+    // display: flex;
+    // flex-direction: column;
+    // gap: 16px;
+    overflow: hidden;
   }
 
-  /* &__item {
-  justify-content: space-between;
-} */
+  &__list {
+    margin-bottom: 16px;
+
+    @media screen and (min-width: v.$bp-tablet) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__button {
+    display: none;
+
+    @media screen and (min-width: v.$bp-tablet) {
+      display: flex;
+    }
+  }
 }

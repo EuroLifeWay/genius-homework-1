@@ -10,14 +10,18 @@
 
 @use './components/buttons';
 @use './components/carousel-button';
+@use './components/decor-stars';
+@use './components/decor-waves';
 @use './components/icons';
 @use './components/links';
 @use './components/form';
 @use './components/procedure-card';
+@use './components/pagination';
 
 @use './layout/section';
 @use './layout/container';
 @use './layout/header';
+@use './layout/mobile-menu';
 @use './layout/hero-section';
 @use './layout/about-section';
 @use './layout/why-us-section';

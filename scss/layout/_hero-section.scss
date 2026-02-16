@@ -1,84 +1,152 @@
-@use '../utils/variables' as var;
+@use '../utils/variables' as v;
 
 .hero-section {
   position: relative;
-  /* background-image: linear-gradient(
-      94deg,
-      #fff 9.65%,
-      rgba(255, 255, 255, 0.85) 26.08%,
-      rgba(255, 255, 255, 0.19) 52.74%,
-      rgba(255, 255, 255, 0) 74.46%
-    ),
-    url('../images/hero-bg-image.webp');
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover; */
-  padding: 122.5px 0 126.5px;
+  // background-image:
+  //   linear-gradient(
+  //     94deg,
+  //     #fff 21.65%,
+  //     rgba(255, 255, 255, 0.85) 36.08%,
+  //     rgba(255, 255, 255, 0.19) 52.74%,
+  //     rgba(255, 255, 255, 0) 74.46%
+  //   ),
+  //   url('../images/hero-bg-image.webp');
+  // background-repeat: no-repeat;
+  // background-position: center center;
+  // background-size: cover;
+  padding: 70px 0 28px;
+  // z-index: -2;
+
+  @media screen and (min-width: v.$bp-desktop) {
+    background-position: right top;
+    background-size: contain;
+    padding: 122.5px 0 126.5px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    background-position: center bottom;
+    background-size: cover;
+    padding: 272px 0 272px;
+  }
 
   &::before {
     content: '';
     position: absolute;
     top: 0;
+    // left: 50%;
+    // transform: translateX(-50%);
     right: 0;
     width: 100%;
     min-height: 100%;
     background-image:
       linear-gradient(
         94deg,
-        #fff 9.65%,
-        rgba(255, 255, 255, 0.85) 26.08%,
+        #fff 21.65%,
+        rgba(255, 255, 255, 0.85) 36.08%,
         rgba(255, 255, 255, 0.19) 52.74%,
         rgba(255, 255, 255, 0) 74.46%
       ),
       url('../images/hero-bg-image.webp');
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: center center;
     background-size: cover;
     z-index: -2;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image:
+        linear-gradient(
+          94deg,
+          #fff 21.65%,
+          rgba(255, 255, 255, 0.85) 36.08%,
+          rgba(255, 255, 255, 0.19) 52.74%,
+          rgba(255, 255, 255, 0) 74.46%
+        ),
+        url('../images/hero-bg-image@2x.webp');
+    }
+
+    // @media screen and (min-width: v.$bp-desktop) {
+    //   background-position: right top;
+    //   background-size: contain;
+    // }
+
+    // @media screen and (min-width: 1440px) {
+    //   background-position: center bottom;
+    //   background-size: cover;
+    // }
   }
 
   &::after {
     content: '';
     position: absolute;
-    bottom: -3px;
+    bottom: -7px;
     left: 0;
     width: 100%;
-    min-width: 1440px;
+    // min-width: 1440px;
     height: 100%;
     background-image: url('../images/hero-bg-mask.svg');
     background-repeat: no-repeat;
     background-position: center top;
-    background-size: cover;
-    /* transform: rotate(180deg) scale(-1, 1); */
+    background-size: contain;
     z-index: -1;
+
+    @media screen and (min-width: v.$bp-tablet) {
+      background-size: cover;
+      /* transform: rotate(180deg) scale(-1, 1); */
+      // z-index: -1; // for &::before
+    }
   }
 
   &__container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     /* justify-content: center; */
-    padding-left: 106px;
+
+    @media screen and (min-width: v.$bp-tablet) {
+      align-items: flex-start;
+      padding-left: 106px;
+    }
   }
 
   &__second-title {
-    margin-bottom: 16px;
+    font-size: 12px;
+    margin-bottom: 0;
+
+    @media screen and (min-width: v.$bp-tablet) {
+      margin-bottom: 16px;
+    }
   }
 
   &__title {
-    color: var.$color-brand-light;
-    font-family: var.$font-title;
-    font-size: 140px;
+    font-family: v.$font-title;
+    font-size: 54px;
     font-weight: 700;
-    line-height: 0.8;
-    margin-bottom: 40px;
+    line-height: 0.85;
+    margin-bottom: 32px;
+    color: v.$color-brand-light;
+
+    @media screen and (min-width: v.$bp-tablet) {
+      color: v.$color-brand-light;
+      font-family: v.$font-title;
+      font-size: 140px;
+      line-height: 0.85;
+      max-width: 530px;
+      margin-bottom: 40px;
+    }
   }
 
   &__button-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
+    align-items: center;
+    gap: 8px;
+
+    @media screen and (min-width: v.$bp-tablet) {
+      align-items: flex-start;
+      gap: 14px;
+    }
   }
 
   &__button {
@@ -88,11 +156,16 @@
   }
 
   &__button-description {
-    max-width: 238px;
-    color: var.$color-primery-light;
-    font-size: 12px;
-    line-height: 1.5;
+    font-size: 11px;
+    line-height: 1.64;
     text-align: center;
-    margin-bottom: 0;
+    max-width: 238px;
+    color: v.$color-primery-light;
+
+    @media screen and (min-width: v.$bp-tablet) {
+      font-size: 12px;
+      line-height: 1.5;
+      margin-bottom: 0;
+    }
   }
 }

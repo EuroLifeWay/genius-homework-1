@@ -1,4 +1,4 @@
-@use '../utils/variables' as var;
+@use '../utils/variables' as v;
 
 .backdrop {
   position: fixed;
@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px 0;
+  padding: 20px;
   background: rgba(1, 31, 74, 0.4);
   transition:
     opacity 0.2s,
@@ -30,29 +30,41 @@
   align-items: center;
   width: 100%;
   max-width: 723px;
-  height: 100%;
   max-height: 681px;
-  padding: 42px 144px;
-  background: var.$color-primery-dark;
+  padding: 56px 24px;
+  background: v.$color-primery-dark;
   background-image: url('../images/modal-form-vector.svg');
-  border-radius: 48px;
+  border-radius: 24px;
   overflow-y: auto;
 
+  @media screen and (min-width: v.$bp-tablet) {
+    flex-basis: fill;
+    height: 100%;
+    padding: 42px 144px;
+    border-radius: 48px;
+  }
+
   &__title {
-    margin-bottom: 40px;
-    color: var.$color-background;
+    margin-bottom: 32px;
+    color: v.$color-background;
+
+    @media screen and (min-width: v.$bp-tablet) {
+      margin-bottom: 40px;
+    }
   }
 
   &__btn-close {
-    position: absolute;
-    top: 42px;
-    right: 42px;
-    width: 32px;
-    height: 32px;
-    fill: none;
-    stroke: var.$color-background;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    stroke: v.$color-background;
+
+    @media screen and (min-width: v.$bp-tablet) {
+      top: 42px;
+      right: 42px;
+      width: 32px;
+      height: 32px;
+    }
   }
 }

@@ -1,4 +1,4 @@
-@use '../utils/variables' as var;
+@use '../utils/variables' as v;
 
 .icon-item {
   display: flex;
@@ -8,7 +8,7 @@
     transition: fill 0.2s;
 
     &:hover {
-      fill: var.$color-brand-light;
+      fill: v.$color-brand-light;
     }
   }
 }

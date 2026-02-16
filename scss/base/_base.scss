@@ -1,16 +1,16 @@
-@use '../utils/variables' as var;
+@use '../utils/variables' as v;
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  outline: 1px solid rgba(255, 0, 0, 0.2) !important;
+  // outline: 1px solid rgba(255, 0, 0, 0.2) !important;
 }
 
 body {
-  color: var.$color-primery-dark;
-  background-color: var.$color-background;
-  font-family: $font-primary;
+  color: v.$color-primery-dark;
+  background-color: v.$color-background;
+  font-family: v.$font-primary;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.16;

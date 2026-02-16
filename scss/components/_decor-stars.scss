@@ -1,0 +1,150 @@
+@use '../utils/variables' as v;
+@use '../utils/mixins' as mix;
+
+.decor-stars {
+  &__big {
+    position: relative;
+    // display: flex;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+
+      @include mix.star-style(40px, $r: 0px, $b: -70px);
+
+      background-color: v.$color-decor;
+      -webkit-mask: url('../images/star-1.svg') no-repeat center / contain;
+      mask: url('../images/star-1.svg') no-repeat center / contain;
+      mask-mode: alpha;
+      animation: float 3s ease-in-out infinite alternate;
+
+      @keyframes float {
+        0% {
+          transform: translate(0, 0) rotate(0deg) scale(0.8);
+        }
+        100% {
+          transform: translate(-50px, 50px) rotate(360deg) scale(1.2);
+        }
+      }
+
+      @media screen and (min-width: v.$bp-tablet) {
+        @include mix.star-style(52px, $t: -16px, $l: -32px);
+      }
+
+      @media screen and (min-width: v.$bp-desktop) {
+        @include mix.star-style(64px, $t: -16px, $l: -32px);
+      }
+    }
+
+    &--flag {
+      &::before {
+        content: '';
+
+        @media screen and (min-width: v.$bp-tablet) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__group {
+    // position: absolute;
+    /* Устанавливаем базовый фильтр свечения */
+    filter: drop-shadow(0 0 5px gold);
+    animation: magic-star 3s ease-in-out infinite alternate;
+
+    &--middle {
+      @include mix.star-style(
+        30px,
+        $t: 32px,
+        $r: 32px,
+        $color: v.$color-brand-light
+      );
+
+      @media screen and (min-width: v.$bp-desktop) {
+        @include mix.star-style(
+          40px,
+          $t: 32px,
+          $r: 32px,
+          $color: v.$color-brand-light
+        );
+      }
+    }
+
+    &--small {
+      @include mix.star-style(16px, $r: 68px, $b: 40px, $color: v.$color-grey);
+    }
+
+    @keyframes magic-star {
+      0% {
+        transform: translate(50px, 0px) rotate(0deg) scale(0.8);
+        opacity: 0.5;
+        filter: drop-shadow(0 0 2px gold) brightness(1);
+      }
+
+      50% {
+        /* В середине анимации добавляем яркий всплеск */
+        opacity: 1;
+        filter: drop-shadow(0 0 15px yellow) brightness(1.5);
+      }
+
+      100% {
+        /* В конце — поворот и увеличение */
+        transform: translate(30px, -35px) rotate(180deg) scale(1.2);
+        opacity: 0.7;
+        filter: drop-shadow(0 0 8px gold) brightness(1.2);
+      }
+    }
+
+    @media screen and (min-width: v.$bp-desktop) {
+      @keyframes magic-star {
+        0% {
+          transform: translate(0) rotate(0deg) scale(0.8);
+        }
+
+        100% {
+          transform: translate(50px, -15px) rotate(180deg) scale(1.2);
+        }
+      }
+    }
+  }
+}
+
+// .star-middle {
+//   width: 40px;
+//   height: 40px;
+//   top: 32px;
+//   right: -20px;
+//   background-image: url('../images/icons.svg#icon-star-2');
+//   fill: var(--color-brand-light);
+// }
+
+// .star-small {
+//   width: 16px;
+//   height: 16px;
+//   right: 16px;
+//   bottom: 40px;
+//   background-image: url('../images/icons.svg#icon-star-3');
+//   fill: var(--color-grey);
+// }
+
+// .star-middle {
+//   width: 100px;
+//   height: 100px;
+//   top: 32px;
+//   right: -20px;
+//   fill: var(--color-brand-light);
+// }
+
+// @include mix.star-style(200px, 200px, $t: 32px, $r: -20px, $color: var.$color-grey);
+
+// .star-small {
+//   width: 50px;
+//   height: 50px;
+//   right: 16px;
+//   bottom: 40px;
+//   fill: var(--color-grey);
+// }
+
+// @include mix.star-style(50px, 50px, $r: 16px, $b: 40px, $color: var.$color-grey);

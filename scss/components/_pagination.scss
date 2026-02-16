@@ -1,0 +1,28 @@
+@use '../utils/variables' as v;
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+
+  @media screen and (min-width: v.$bp-tablet) {
+    gap: 24px;
+  }
+
+  &__button {
+    width: 8px;
+    height: 8px;
+    // padding: 0;
+    background-color: v.$color-grey;
+    border-radius: 50%;
+
+    @media screen and (min-width: v.$bp-tablet) {
+      width: 11px;
+      height: 11px;
+
+      &--active {
+        background-color: v.$color-brand-light;
+      }
+    }
+  }
+}

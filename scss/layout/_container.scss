@@ -1,7 +1,12 @@
+@use '../utils/variables' as v;
+
 .container {
   width: 100%;
   max-width: 1288px;
   margin: 0 auto;
-  padding: 0 24px;
-  /* background-color: lightgray; */
+  padding: 0 20px;
+
+  @media screen and (min-width: v.$bp-tablet) {
+    padding: 0 24px;
+  }
 }
